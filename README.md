@@ -1,5 +1,5 @@
 # SSTNet for remote sensing image super-resolution
-Official Pytorch implementation of the paper "[Activated Sparsely Sub-Pixel Transformer for Remote Sensing Image Super-Resolution](https://www.mdpi.com/2072-4292/16/11/1895)" accepted by Remote Sensing.  
+Pytorch implementation of the paper "[Activated Sparsely Sub-Pixel Transformer for Remote Sensing Image Super-Resolution](https://www.mdpi.com/2072-4292/16/11/1895)" accepted by Remote Sensing.  
 
 
 ## Requirements
