@@ -8,8 +8,7 @@ import skimage.transform as st
 import torch
 from torchvision import transforms
 
-#应该是将输入图片分patch吗，一张图分割？
-#random？
+
 def get_patch(img_in, img_tar, patch_size, scale, multi_scale=False):
     ih, iw = img_in.shape[:2]
     """randomly get patches from lr and hr images """
@@ -26,8 +25,7 @@ def get_patch(img_in, img_tar, patch_size, scale, multi_scale=False):
 
     return img_in, img_tar
 
-#n_channel和c对应关系的一个校准吗
-#但是不知道哪里要用，，，有啥具体应用啊
+
 def set_channel(l, n_channel):
     def _set_channel(img):
         if img.ndim == 2:
@@ -73,7 +71,7 @@ def add_noise(x, noise='.'):
     else:
         return x
 
-#名字叫augment，与翻转与flip有关，emm是数据增强吗，但是不知道哪里调用了
+
 def augment(l, hflip=True, rot=True):
     """augment train data by horizontal flip, vertical flip and rotation"""
     hflip = hflip and random.random() < 0.5
