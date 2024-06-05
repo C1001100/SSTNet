@@ -20,13 +20,13 @@ The train/val data pathes are set in [data/__init__.py](codes/data/__init__.py)
 
 ```
 # x4
-python demo_train.py --model=Proposed --dataset=UCMerced --scale=4 --patch_size=192 --ext=img --save=TRANSENETx4_UCMerced
+python demo_train.py --model=Proposed --dataset=UCMerced --scale=4 --patch_size=192 --ext=img --save=Proposedx4_UCMerced
 # x3
-python demo_train.py --model=Proposed --dataset=UCMerced --scale=3 --patch_size=144 --ext=img --save=TRANSENETx3_UCMerced
+python demo_train.py --model=Proposed --dataset=UCMerced --scale=3 --patch_size=144 --ext=img --save=Proposedx3_UCMerced
 # x2
-python demo_train.py --model=Proposed --dataset=UCMerced --scale=2 --patch_size=96 --ext=img --save=TRANSENETx2_UCMerced
+python demo_train.py --model=Proposed --dataset=UCMerced --scale=2 --patch_size=96 --ext=img --save=Proposedx2_UCMerced
 
-python demo_train.py --model=Proposed --dataset=AID --scale=2 --patch_size=96 --ext=img --save=TRANSENETAHH
+
 ```
 
 
