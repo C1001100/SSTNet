@@ -133,57 +133,27 @@ def deploy(args, sr_model):
 if __name__ == '__main__':
 
     # args parameter setting
+    args.pre_train = '/home/work/experiment/test/model/model_best.pt'
+    args.dir_out = '/home/experiment/test/results'
+    args.dir_data = '/home/data/AID-dataset/test/LR_x4/'
 
-    # args.pre_train = '../Draw_uc_x2/fake.pt'
-    #Transenet_x4
-    #proposed_x4
-
-    args.pre_train = '/home/featurize/work/experiment/Proposedx4_AID_OK/model/model_best.pt'
-    #'../experiment/PSV2/model/model_best.pt'
-    #model_best
-    #model_latest
-    args.dir_out = '/home/featurize/experiment/Proposedx4_AID_OK/results'
-    # args.dir_out = '../classMatch/airport/'
-    #'../experiment/WhySeed/results/'
-
-    args.dir_data = '/home/featurize/data/AID-dataset/test/LR_x4/'
-    # args.dir_data = '/home/featurize/data/UCMerced-dataset/test/LR_x4/'
-    #'D:/A_DataSet/Draw/AID/LR_x4'
-    #D:/A_DataSet/Draw/UC
-    # 'D:/A_DataSet/AID-dataset/test/LR_x4/'
-    #'D:/A_DataSet/UCMerced-dataset/test/LR_x4'
 
     checkpoint = utils.checkpoint(args)
 
     device = torch.device( "cuda:0" if torch.cuda.is_available() else"cpu")
     # device = torch.device("cpu")
-    #time try----------------
-    time_start = time.time()
+
 
     sr_model = model.Model(args, checkpoint).to(device)  # modify
     sr_model.eval()
 
 
 
-
-    #计算参数量和计算量
     flops, params = get_model_complexity_info(sr_model, (3, 96, 96), as_strings=True, print_per_layer_stat=True)
     print('flops: ', flops, ', params: ', params)
 
-    # analyse the params of the load model
-    # pytorch_total_params = sum(p.numel() for p in sr_model.parameters())
-    # print(pytorch_total_params)
-    # pytorch_total_params2 = sum(p.numel() for p in sr_model.parameters() if p.requires_grad)
-    # print(pytorch_total_params2)
-    # for name, p in sr_model.named_parameters():
-    #     print(name)
-    #     print(p.numel())
-    #     print('========')
 
-    #输出样例
     deploy(args, sr_model)
 
-    # time try----------------
-    time_end = time.time()
-    print('totally cost', time_end - time_start)
+
 
