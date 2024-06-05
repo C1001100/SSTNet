@@ -25,8 +25,6 @@ python demo_train.py --model=Proposed --dataset=UCMerced --scale=4 --patch_size=
 python demo_train.py --model=Proposed --dataset=UCMerced --scale=3 --patch_size=144 --ext=img --save=Proposedx3_UCMerced
 # x2
 python demo_train.py --model=Proposed --dataset=UCMerced --scale=2 --patch_size=96 --ext=img --save=Proposedx2_UCMerced
-
-
 ```
 
 
@@ -40,7 +38,6 @@ python demo_deploy.py --model=Proposed --scale=4
 python demo_deploy.py --model=Proposed --scale=3
 # x2
 python demo_deploy.py --model=Proposed --scale=2
-
 ```
 
 ## Evaluation 
