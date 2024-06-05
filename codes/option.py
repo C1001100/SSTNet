@@ -52,7 +52,7 @@ parser.add_argument('--test_patch', action='store_true', default=False,
                     help='test on patches rather than the whole image')
 parser.add_argument('--test_block', action='store_true', default=True,
                     help='test by blcok-by-block')
-#False---test_block
+
 
 # model specifications
 parser.add_argument('--model', default='BASIC',
@@ -78,12 +78,8 @@ parser.add_argument('--precision', type=str, default='single',
 # training specifications
 parser.add_argument('--reset', action='store_true', default=False,
                     help='reset the training')
-#500
 parser.add_argument('--epochs', type=int, default=2000,
                     help='number of epochs to train')
-
-#16-------------
-#5x5并行res3----------5
 parser.add_argument('--batch_size', type=int, default=16,
                     help='input batch size for training')
 parser.add_argument('--split_batch', type=int, default=1,
