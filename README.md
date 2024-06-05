@@ -16,6 +16,7 @@ Pytorch implementation of the paper "[Activated Sparsely Sub-Pixel Transformer f
 
 
 ## Train
+The train/val data pathes are set in [data/__init__.py](codes/data/__init__.py) 
 
 ```
 # x4
@@ -28,7 +29,6 @@ python demo_train.py --model=Proposed --dataset=UCMerced --scale=2 --patch_size=
 python demo_train.py --model=Proposed --dataset=AID --scale=2 --patch_size=96 --ext=img --save=TRANSENETAHH
 ```
 
-The train/val data pathes are set in [data/__init__.py](codes/data/__init__.py) 
 
 ## Test 
 The test data path and the save path can be edited in [demo_deploy.py](codes/demo_deploy.py)
@@ -44,7 +44,7 @@ python demo_deploy.py --model=Proposed --scale=2
 ```
 
 ## Evaluation 
-Compute the evaluated results in term of PSNR and SSIM, where the SR/HR paths can be edited in [calculate_PSNR_SSIM.py](codes/metric_scripts/calculate_PSNR_SSIM.py)
+The SR/HR paths can be edited in [calculate_PSNR_SSIM.py](codes/metric_scripts/calculate_PSNR_SSIM.py)
 
 ```
 cd metric_scripts 
