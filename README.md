@@ -16,7 +16,7 @@ Pytorch implementation of the paper "[Activated Sparsely Sub-Pixel Transformer f
 
 
 ## Train
-The train/val data pathes are set in [data/__init__.py](codes/data/__init__.py) 
+The train/val data paths are set in [data/__init__.py](codes/data/__init__.py) 
 
 ```
 # x4
