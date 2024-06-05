@@ -64,6 +64,7 @@ If you find this code useful for your research, please cite our paper:
 ``````
 
 ## Acknowledgements 
-This code is built on [TransENet (Pytorch)](https://github.com/Shaosifan/TransENet), [RCAN (Pytorch)](https://github.com/yulunzhang/RCAN) and [EDSR (Pytorch)](https://github.com/sanghyun-son/EDSR-PyTorch). We thank the authors for sharing the codes.  
+This code is built on [TransENet (Pytorch)](https://github.com/Shaosifan/TransENet), [RCAN (Pytorch)](https://github.com/yulunzhang/RCAN) and [EDSR (Pytorch)](https://github.com/sanghyun-son/EDSR-PyTorch).
+We thank the authors for sharing the codes.  
 
 
