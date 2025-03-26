@@ -251,7 +251,7 @@ class ProposedModel(nn.Module):
 
 if __name__ == "__main__":
     from option import args
-    model = TransENet(args)
+    model = ProposedModel(args)
     model.eval()
     input = torch.rand(1, 3, 48, 48)
     sr = model(input)
